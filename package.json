@@ -1,7 +1,7 @@
 {
   "name": "express-boilerplate",
   "version": "0.0.1",
-  "description": "A boilerplate RESTful API project with Docker, Express, TypeScript, Swagger and TypeORM",
+  "description": "A boilerplate RESTful API project with Docker, Express, TypeScript, Swagger, and TypeORM",
   "keywords": [
     "boilerplate",
     "docker",
@@ -10,8 +10,8 @@
     "swagger",
     "typeorm"
   ],
-  "author": "Nicolás Moreira",
-  "license": "Apache",
+  "author": "Arion",
+  "license": "MIT",
   "type": "commonjs",
   "devDependencies": {
     "@types/cors": "^2.8.12",
