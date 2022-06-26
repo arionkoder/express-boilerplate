@@ -1,0 +1,72 @@
+{
+  "name": "express-boilerplate",
+  "version": "0.0.1",
+  "description": "A boilerplate RESTful API project with Docker, Express, TypeScript, Swagger and TypeORM",
+  "keywords": [
+    "boilerplate",
+    "docker",
+    "express",
+    "typescript",
+    "swagger",
+    "typeorm"
+  ],
+  "author": "Nicolás Moreira",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/morgan": "^1.9.3",
+    "@types/node": "^16.11.41",
+    "@types/swagger-ui-express": "^4.1.3",
+    "@typescript-eslint/eslint-plugin": "^5.29.0",
+    "@typescript-eslint/parser": "^5.29.0",
+    "concurrently": "^7.2.2",
+    "eslint": "^8.18.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.3",
+    "eslint-plugin-promise": "^6.0.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "nodemon": "^1.3.3",
+    "prettier": "2.7.1",
+    "ts-node": "^10.7.0",
+    "typescript": "4.5.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.17.2",
+    "helmet": "^5.1.0",
+    "mysql": "^2.14.1",
+    "reflect-metadata": "^0.1.13",
+    "routes": "^2.1.0",
+    "swagger-ui-express": "^4.4.0",
+    "tsoa": "^4.1.0",
+    "typeorm": "0.3.6"
+  },
+  "scripts": {
+    "start": "node build/index.js",
+    "predev": "npm run swagger",
+    "prebuild": "npm run swagger",
+    "typeorm": "typeorm-ts-node-commonjs",
+    "build": "tsoa spec-and-routes && tsc",
+    "dev": "concurrently \"nodemon\" \"nodemon -x tsoa spec-and-routes\"",
+    "swagger": "tsoa spec-and-routes",
+    "prepare": "husky install",
+    "scriptname": "cmd",
+    "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "src"
+    ],
+    "ext": "ts",
+    "exec": "npx ts-node src/index.ts"
+  }
+}
