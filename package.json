@@ -11,7 +11,7 @@
     "typeorm"
   ],
   "author": "Nicolás Moreira",
-  "license": "ISC",
+  "license": "Apache",
   "type": "commonjs",
   "devDependencies": {
     "@types/cors": "^2.8.12",
