@@ -20,6 +20,7 @@ export class UserController extends Controller {
       return user;
     } else {
       this.setStatus(404);
+      
       return;
     }
   }
