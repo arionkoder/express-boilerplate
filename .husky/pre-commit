@@ -1,4 +1,6 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npx lint-staged
+#npx lint-staged
+
+docker exec express-boilerplate_app_1 npx lint-staged 
