@@ -114,3 +114,5 @@ _.txt
 .Trashes
 ehthumbs.db
 Thumbs.db
+build/
+public/
